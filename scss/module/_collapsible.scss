@@ -1,0 +1,23 @@
+/* ======= collapsible ======= */
+.m-collapsible{
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    &__content{
+        a{
+            display: block;
+            padding: 10px 0 10px 15px;
+        }
+    }
+    
+}
+.js-collapsible{
+    &__content{
+        display: none;
+        .js-active{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+/* dropdown */
+.m-dropdown{
+    &__menu{
+        width: 100%;
+        position: absolute;
+        left:0;
+    }
+}
+.js-dropdown{
+    &__menu{
+        display: none;
+    }
+}

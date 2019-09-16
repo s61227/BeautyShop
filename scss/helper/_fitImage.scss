@@ -1,0 +1,12 @@
+@mixin fit-image($sizeW, $sizeH){
+    object-fit: cover;
+    width: $sizeW;
+    height: $sizeH;
+}
+
+@mixin fit-bgImage {
+    object-fit: cover;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

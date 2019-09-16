@@ -1,0 +1,263 @@
+/* ======= layout ======= */
+// header區
+.l-header{
+    width: 100%;
+    padding: 0 15px;
+    background-color: $bg-primary;
+    position: fixed;
+    z-index: 1000;
+    &__rightSide{
+        a{
+            display: inline-block;
+            margin-left: 30px;
+            font-size: $font-size-sm;
+            @include mobile(){
+                margin-left: 0;
+            }
+        }
+        i{
+            font-size: $font-size-base;
+        }
+    }
+}
+.l-logo{
+    font-size: $font-size-lg;
+    font-weight:$font-weight-bolder;
+    padding: 20px 0;
+    margin-right: 30px;
+    @include mobile(){
+        margin-right: 0;
+    }
+}
+.l-search{
+    border-bottom: 1px solid $dark;
+    padding: 5px 0;
+    opacity: 0.5;
+    input{
+        border: none;
+        outline: none;
+        padding-left: 15px;
+    }
+}
+.l-menu{
+    position: relative;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    margin-bottom: 10px;
+    a{
+        display: inline-block;
+        margin: 0 20px;
+        padding: 10px 5px;
+        
+        box-sizing: border-box;
+        span{
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 1px solid $white;
+            &:hover{
+                border-bottom: 1px solid $dark;
+            }
+        }
+    }
+    .row{
+        background-color: $gray;
+        margin: 0 30px;
+        padding: 30px 0;
+    }
+    ul{
+        font-size: $font-size-sm;
+        li:nth-of-type(1){
+            font-weight: $font-weight-bold;
+            font-size: $font-size-base;
+        }
+    }
+    img{
+        @include fit-image(150px, 300px);
+        margin: 0 15px;
+        display: inline-block;
+    }
+}
+// main區
+.l-main{
+    padding: 120px 15px 0 15px;
+    background-color: #ffffff;
+    @include mobile(){
+        padding: 64px 0 0 0;
+    }
+}
+.l-banner{
+    width: 100%;
+    img{
+        @include fit-image(100%, 480px);
+    }
+    .owl-stage-outer{
+        position: relative;
+    }
+    .owl-theme .owl-controls .owl-nav{
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        transform: translate(-45%,-45%);
+        &:hover{
+            background: transparent;
+        }
+        .owl-prev{
+            background: transparent;
+            position: absolute;
+            left: 10px;
+            i{
+                font-size: $font-size-lg;
+                color: $gray;
+            }
+        }
+        .owl-next{
+            position: absolute;
+            right: 10px;
+            background: transparent;
+            i{
+                font-size: $font-size-lg;
+                color: $gray;
+            }
+        }
+    }
+}
+.l-product{
+    margin-bottom: 60px;   
+}
+.l-marketing{
+    background-color: $gray;
+    padding: 30px;
+    margin: 60px 0;
+}
+
+//footer區
+.l-footer{
+    width: 100%;
+    padding: 0 15px;
+    p{
+        text-align: center;
+        padding: 20px 0;
+        @include mobile(){
+            padding: 50px 0 20px;
+        }
+    }
+    &__email{
+        box-sizing: border-box;
+        border: 1px solid $dark;
+        input{
+            outline: none;
+            border: none;
+            padding: 0 15px;
+            margin: 5px 0;
+        }
+        button{
+            @include button(40px, 40px, $white, $dark);
+        }
+    }
+}
+.l-social{
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    padding: 5px 0;
+    @include mobile(){
+        text-align: center;
+    }
+    p{
+        font-weight: $font-weight-bold;
+        margin: 0 15px;
+        @include mobile(){
+            padding: 10px 0;
+        }
+    }
+    a{
+        display: inline-block;
+        margin: 10px;
+        font-size: $font-size-xl;
+        @include mobile(){
+            margin: 0 10px;
+        }
+    }
+    button{
+        @include button(auto, auto, $dark, $white);
+        max-width: 320px;
+        border: 1px solid $dark;
+        padding: 5px;
+        margin: 0 40px;
+        @include mobile(){
+            width: 100%;
+            margin: 20px 0;
+        }
+        &:hover{
+            background-color: $dark;
+            color: $white;
+        }
+    }
+}
+footer{
+    section{
+        padding: 40px 0;
+        @include mobile(){
+            padding: 20px 0 0 0;
+        }
+    }
+    h3{
+        font-size: $font-size-md;
+        font-weight: $font-weight-bolder;
+        margin: 20px 0;
+    }
+    ul{
+        li{
+            margin: 10px 0;
+        }
+    }
+    
+}
+
+.l-mobile__menu{
+    display: none;
+    background-color: $white;
+    width: 90%;
+    height: 100%;
+    position: fixed;
+    z-index: 1002;
+    overflow-x: scroll;
+    h2{
+        text-align: center;
+        padding: 15px;
+        background-color: $gray;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+    }
+    .m-collapsible{
+        border-bottom: 1px solid $gray;
+    }
+    .l-search{
+        width: 100%;
+        padding: 5px 10px;
+    }
+}
+.l-close{
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 90%;
+    padding: 5px;
+    background-color: $white;
+    i{
+        font-size: $font-size-md;
+    }
+}
+.l-overlay{
+    display: none;
+    background-color: rgba(34, 34, 34, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+html.js-active{
+    height: 100%;
+    overflow: hidden;
+}

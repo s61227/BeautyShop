@@ -1,0 +1,37 @@
+/* ======= product ======= */
+.p-product{
+    h2{
+        text-align: left;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-md;
+        padding: 40px 0;
+        @include mobile(){
+            padding-left: 30px;
+        }
+    }
+    .container{
+        @include mobile(){
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .m-card{
+        margin-bottom: 50px;
+    }
+    .m-collapsible{
+        &__title{
+            border-top: 1px solid $gray; 
+            i{
+                font-size: $font-size-md;
+            }
+            &:hover{
+                background-color: $gray;
+            }
+        }
+    }
+    .js-collapsible{
+        .js-active{
+            background-color: $gray;
+        }
+    }
+}

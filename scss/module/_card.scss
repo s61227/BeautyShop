@@ -1,0 +1,84 @@
+/* card */
+.m-card{
+    margin-bottom: 20px;
+    @include mobile(){
+        margin: 0 30px 30px;
+    }
+    &__img{
+        position: relative;
+        img{
+            @include fit-image(100%, 230px);
+        }     
+    }
+    &__tag{
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: $pink; 
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        color: $red;
+        padding: 10px;
+        letter-spacing: 2px;
+        box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);
+    }
+    &__like{
+        position: absolute;
+        top:10px;
+        right: 15px;
+        cursor: pointer;
+        i{
+            color: $dark;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-bolder;
+        }
+    }
+    &__content{
+        padding: 10px;
+        text-align: center;
+        p{
+            margin: 8px 0;
+        }
+    }
+    &__title{
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        color: $dark;
+    }
+    &__size{
+        font-size: $font-size-sm;
+        color: $dark-gray;
+        font-weight: $font-weight-bold;
+        letter-spacing: 2px;
+    }
+    &__price{
+        font-weight: $font-weight-bold;
+        color: $red;
+        font-size: $font-size-base;
+        span{
+            margin: 0 5px;
+        }
+        span:nth-of-type(2){
+            color: $dark;
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+    }
+    &__Btn{
+        text-align: center;
+        button{
+            @include button(80%, 35px, $dark, transparent);
+            font-size: $font-size-sm;
+            border: 1px solid $dark;
+            i{
+                margin-left: 10px;
+                font-size: $font-size-base;
+            }
+            &:hover{
+                background-color: $dark;
+                color: $white;
+                border: 1px solid $dark;
+            }
+        }
+    }   
+}
