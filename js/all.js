@@ -43,12 +43,14 @@ $(document).ready(function () {
         $(".js-mobileMenu").css( "display", "block" );
         $(".js-closeBtn").css( "display", "inline-block" );
         $(".l-overlay").css( "display", "block");
-        $("html").addClass("js-active");
+        $("html").addClass("js-overlay-active");
+        $("body").addClass("js-overlay-active");
     });
     $( ".js-closeBtn" ).click(function() {
         $(".js-mobileMenu").css( "display", "none" );
         $(".l-close").css( "display", "none" );
         $(".l-overlay").css( "display", "none" );
-        $("html").removeClass("js-active");
+        $("html").removeClass("js-overlay-active");
+        $("body").removeClass("js-overlay-active");
     });
 });

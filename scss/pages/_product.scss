@@ -9,6 +9,11 @@
             padding-left: 30px;
         }
     }
+    .l-banner{
+        img{
+            @include fit-image(100%, 200px);
+        }
+    }
     .container{
         @include mobile(){
             padding-right: 0;
